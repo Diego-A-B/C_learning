@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 #define max_num 100
@@ -9,7 +10,7 @@ int main(){
     
     srand(time(0));
 
-    target = 1+rand()%100;
+    target = 1+rand()%max_num;
 
     printf("Make a guess from 1-%d:\n", max_num);
 
@@ -31,7 +32,7 @@ int main(){
 
     } while (guess != target);
 
-    printf("You guess the target in %d guesses", guess_count);
+    printf("You guessed the target in %d guesses", guess_count);
 
     return 0;
     
