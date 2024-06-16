@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+
+    FILE *ifp;
+    int weight;
+
+    ifp = fopen("Elephant_Seal_Data.txt","r");
+
+    int count = 0;
+    int sum = 0;
+    double avg;
+
+    while(fscanf(ifp, "%d",&weight) != EOF){
+        ++count;
+        sum += weight;
+    }
+
+    avg = sum / (double) count;
+    printf("Avg. Weight of ELephant Seal: %lf\nSeal sample size: %d\nTotal Cumulative Weight:%d", avg, count,sum);
+
+
+
+    return 0;
+}
