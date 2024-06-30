@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#DEFINE MAX_HW 20
+#define MAX_HW 20
 
 void read_data(FILE *ptr, int d[], int *size){
 
@@ -41,12 +41,12 @@ int main(){
 
     FILE *ifp;
 
-    int data[MAX_HW] = {100,0};
+    int data[MAX_HW] = {0};
 
     ifp = fopen("myhw.txt", "r");
     read_data(ifp,data,&size);
 
-    printf("My %d Home work scores are:", size);
+    printf("My %d Home work scores are:\n", size);
     print_data(data, size);
     printf("\nThe average score was %10f", average(data,size));
     printf("\n\n");
