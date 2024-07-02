@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace :: std;
+//namespace :: std;
 
 const double m_to_k = 1.609;
 
@@ -14,13 +14,13 @@ int main(void){
     int miles = 1;
     while(miles != 0 ){
 
-        cout << "Input distance in miles or 0 to terminate:";
+        std::cout << "Input distance in miles or 0 to terminate:";
 
-        cin >> miles;
+        std::cin >> miles;
 
-        cout << "\nDistance is " << convert(miles) << "km" << endl;
+        std::cout << "\nDistance is " << convert(miles) << "km" << std::endl;
 
     }
 
-    cout << endl;
+    std::cout << std::endl;
 }
