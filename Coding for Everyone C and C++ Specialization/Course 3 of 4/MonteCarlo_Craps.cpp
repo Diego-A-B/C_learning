@@ -29,7 +29,7 @@ int main() {
     std::vector<int> outcomes(13, 0); // Initialize a vector of size 13 with all elements 0
 
     // Run the simulation
-    for (int i = 0; i < trials; ++i) {
+    for(int i = 0; i < trials; ++i) {
         int sum = roll_two_dice();
         outcomes[sum]++;
     }
